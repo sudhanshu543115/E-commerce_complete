@@ -2,10 +2,10 @@
   "name": "e-commercee",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "dev": "concurrently \"nodemon src/server.js\" \"npm run dev --prefix src/data\"",
-  "start": "node src/server.js"
-},
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,7 +17,7 @@
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.17.2",
-    "nodemon": "^3.1.10",
+    "nodemon": "^3.1.11",
     "razorpay": "^2.9.6"
   },
   "devDependencies": {
