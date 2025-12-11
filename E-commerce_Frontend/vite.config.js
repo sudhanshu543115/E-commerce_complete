@@ -2,9 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: "./",  // ⭐ REQUIRED for deployment (Render, Netlify, etc.)
   plugins: [react()],
   server: {
-    host: true,        // or '0.0.0.0'
+    host: true,
     port: process.env.PORT ? parseInt(process.env.PORT) : 5173
   }
 })
