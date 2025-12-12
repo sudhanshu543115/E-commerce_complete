@@ -15,15 +15,28 @@ const mens_kurta = require('./data/Men/men_kurta')
 const app = express();
 const PORT = process.env.PORT || 9000;
 
-// Enable CORS for all routes
-app.use(cors());
+// Parse JSON bodies
 app.use(express.json());
+
+// Configure CORS for frontend origins (no trailing slashes)
+const allowedOrigins = [
+  'https://e-commerce-complete-frontend.onrender.com',
+  'https://e-commerce-complete-1.onrender.com',
+  'http://localhost:5173'
+];
+
 app.use(cors({
-  origin: ['https://e-commerce-complete-1.onrender.com/','http://localhost:5173/','https://e-commerce-complete-frontend.onrender.com/'],
-  
-  credentials: true
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true); // allow non-browser requests or same-origin
+    return callback(null, allowedOrigins.indexOf(origin) !== -1);
+  },
+  credentials: true,
+  methods: ['GET','POST','PUT','DELETE','OPTIONS','PATCH'],
+  allowedHeaders: ['Content-Type','Authorization','Accept','Origin','X-Requested-With']
 }));
 
+// Ensure preflight requests are handled
+app.options('*', cors());
 
 // Serve static files
 app.use('/static', express.static(path.join(__dirname)));
@@ -194,21 +207,6 @@ app.get('/', (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-app.use(cors({
-  origin: ['https://e-commerce-complete-1.onrender.com/','http://localhost:5173/'],
-  
-  credentials: true
-}));
 
 
 
