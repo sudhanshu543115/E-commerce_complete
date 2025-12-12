@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 9000;
 app.use(cors());
 app.use(express.json());
 app.use(cors({
-  origin: ['https://e-commerce-complete-1.onrender.com/','http://localhost:5173/','https://e-commerce-frontend-pi-ochre.vercel.app/'],
+  origin: ['https://e-commerce-complete-1.onrender.com/','http://localhost:5173/','https://e-commerce-complete-frontend.onrender.com/'],
   
   credentials: true
 }));
