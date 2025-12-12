@@ -25,7 +25,7 @@ import Profile from "../Customer/componants/Profile/Profile";
 
 
 // widget components 
-import Widget from "../widget/widget";
+import Widget from "../../src/Customer/componants/Widget";
 
 const CustomerRouters = () => {
     return (

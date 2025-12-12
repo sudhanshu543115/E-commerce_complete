@@ -5,8 +5,8 @@ function Widget() {
     <>
       <div className="chat-widget-container">
         <ChatCRMWidget
-          apiKey="sk_868826de5015e2e1280f34f8943c81f041237db4804894baa86d2dad10f22479"
-          apiUrl="https://chat-crm-backend-7mzo.onrender.com"
+          apiKey="sk_2703d07530080a595027b08cf03f428f1325636f95325bcde459bbeacbf1a3a4"
+          apiUrl="https://aero-nexus-bd.onrender.com"
           primaryColor="#c4023c"
           classname="z-index"
         />
