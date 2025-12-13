@@ -35,8 +35,15 @@ app.use(cors({
   allowedHeaders: ['Content-Type','Authorization','Accept','Origin','X-Requested-With']
 }));
 
-// Ensure preflight requests are handled
-app.options('*', cors());
+// Ensure preflight requests are handled  
+
+//app.options('/*', cors());
+
+// Import routes
+const authRouters = require("./routes/auth.route");
+
+// Mount routes
+app.use("/auth", authRouters);
 
 // Serve static files
 app.use('/static', express.static(path.join(__dirname)));
