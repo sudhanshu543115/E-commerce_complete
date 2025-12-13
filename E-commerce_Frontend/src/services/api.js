@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 
  const API_BASE_URL = import.meta.env.VITE_BACKEND_URL ;
-=======
- const API_BASE_URL = import.meta.env.BACKEND_URL ;
+ //const API_BASE_URL = import.meta.env.BACKEND_URL ;
  //const API_BASE_URL = 'http://localhost:9000';
->>>>>>> 817f0a9f9f98859a4b1ec491e53fbfad7f627630
 
 // Helper function to get auth headers
 const getAuthHeaders = () => {
