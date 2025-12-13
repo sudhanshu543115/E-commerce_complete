@@ -44,6 +44,8 @@ const authRouters = require("./routes/auth.route");
 
 // Mount routes
 app.use("/auth", authRouters);
+// Ensure preflight requests are handled
+//app.options('*', cors());
 
 // Serve static files
 app.use('/static', express.static(path.join(__dirname)));
