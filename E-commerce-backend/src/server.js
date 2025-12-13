@@ -36,7 +36,7 @@ app.use(cors({
 }));
 
 // Ensure preflight requests are handled
-app.options('*', cors());
+//app.options('*', cors());
 
 // Serve static files
 app.use('/static', express.static(path.join(__dirname)));
